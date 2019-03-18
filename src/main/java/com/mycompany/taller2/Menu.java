@@ -37,9 +37,12 @@ public class Menu {
     }
     public void datoConsola(){
         Scanner sc = new Scanner(System.in);
+        int codigo;
+        do{
         System.out.println("Digite el codigo que desea buscar:");
-        int codigo = sc.nextInt();
+        codigo = sc.nextInt();
         System.out.println(buscar(codigo));
+        }while(codigo!=0);
     }
     public String buscar(int codigo){
         if (mapaAbuelo.containsKey(codigo)) {
